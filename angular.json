@@ -29,12 +29,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/customer-portal/src/environments/environment.ts",
-                  "with": "apps/customer-portal/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "apps/customer-portal/src/environments/environment.ts",
+                "with": "apps/customer-portal/src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -143,12 +141,10 @@
           },
           "configurations": {
             "production": {
-              "fileReplacements": [
-                {
-                  "replace": "apps/admin-portal/src/environments/environment.ts",
-                  "with": "apps/admin-portal/src/environments/environment.prod.ts"
-                }
-              ],
+              "fileReplacements": [{
+                "replace": "apps/admin-portal/src/environments/environment.ts",
+                "with": "apps/admin-portal/src/environments/environment.prod.ts"
+              }],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -232,25 +228,25 @@
       }
     },
     "auth": {
-      "root": "libs/auth",
-      "sourceRoot": "libs/auth/src",
+      "root": "libs/shared/auth",
+      "sourceRoot": "libs/shared/auth/src",
       "projectType": "library",
       "prefix": "nx-workspace",
       "architect": {
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "libs/auth/src/test.ts",
-            "tsConfig": "libs/auth/tsconfig.spec.json",
-            "karmaConfig": "libs/auth/karma.conf.js"
+            "main": "libs/shared/auth/src/test.ts",
+            "tsConfig": "libs/shared/auth/tsconfig.spec.json",
+            "karmaConfig": "libs/shared/auth/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "libs/auth/tsconfig.lib.json",
-              "libs/auth/tsconfig.spec.json"
+              "libs/shared/auth/tsconfig.lib.json",
+              "libs/shared/auth/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
