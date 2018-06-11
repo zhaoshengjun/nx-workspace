@@ -1,3 +1,4 @@
+import { AuthService } from "./../services/auth/auth.service";
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -21,7 +22,7 @@ import { LoginComponent } from '../../containers/login/login.component';
 
     EffectsModule.forFeature([AuthEffects])
   ],
-  providers: [AuthEffects],
+  providers: [AuthEffects, AuthService],
   declarations: [LoginComponent]
 })
 export class AuthModule {}
