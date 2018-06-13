@@ -1,4 +1,4 @@
-import { AuthService } from "./../services/auth/auth.service";
+import { AuthService } from './../services/auth/auth.service';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -9,7 +9,8 @@ import {
   initialState as authInitialState
 } from './+state/auth.reducer';
 import { AuthEffects } from './+state/auth.effects';
-import { LoginComponent } from '../../containers/login/login.component';
+import { LoginComponent } from '../containers/login/login.component';
+import { LoginFormComponent } from '@nx-workspace/shared/auth/src/components/login-form/login-form.component';
 @NgModule({
   imports: [
     CommonModule,
@@ -23,6 +24,6 @@ import { LoginComponent } from '../../containers/login/login.component';
     EffectsModule.forFeature([AuthEffects])
   ],
   providers: [AuthEffects, AuthService],
-  declarations: [LoginComponent]
+  declarations: [LoginComponent, LoginFormComponent]
 })
 export class AuthModule {}
